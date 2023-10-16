@@ -1,0 +1,35 @@
+<h1 appHeadline mat-dialog-title>  {{ user ? 'Editar datos del alumno. ' : 'Cargar Alumno.' }} </h1>
+<div mat-dialog-content>
+    <!-- contenido -->
+    <form [formGroup]="userForm">
+
+        <div class="row">
+            <div class="col-6">
+                <mat-form-field class="W-100">
+                    <mat-label>Nombre completo</mat-label>
+                    <input formControlName="nombre" matInput>
+                    <mat-error>
+                        Este campo es requerido.
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="col-6">
+                <mat-form-field class="W-100">
+                    <mat-label>Email</mat-label>
+                    <input formControlName="email" matInput>
+                    <mat-error>
+                        Debe ingresar un Email valido.
+                    </mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+
+    </form>
+
+</div>
+
+<div mat-dialog-actions>
+    <button mat-dialog-close mat-button>cancelar</button>
+    <button (click)="onsubmit()" mat-button>Cargar</button>
+</div>

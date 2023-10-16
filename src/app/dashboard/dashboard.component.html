@@ -1,0 +1,22 @@
+<mat-drawer-container class="example-container" autosize>
+
+  <!-- toolbar -->
+  <app-toolbar (toggleSidebar)="showSidebar = !showSidebar"></app-toolbar>
+  <!-- toolbar -->
+  <!-- SIDEBAR -->
+  <mat-drawer [opened]="showSidebar" #drawer class="example-sidenav" mode="over" positions="start">
+    <app-sidebar></app-sidebar>
+  </mat-drawer>
+  <!-- SIDEBAR -->
+  <!-- CONTENIDO -->
+
+    <main style="padding: 1rem;">
+      <h1 appHeadline>Listado</h1>
+      <app-user></app-user>
+      <!-- <app-forms></app-forms> -->
+      
+    </main>
+  <!-- CONTENIDO -->
+  
+</mat-drawer-container>
+<app-footer></app-footer>

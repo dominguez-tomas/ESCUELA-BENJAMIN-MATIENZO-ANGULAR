@@ -1,0 +1,8 @@
+<button (click)="openUserDialog()" mat-flat-button color="primary" >
+   <mat-icon>add</mat-icon> 
+   Ingresar alumno
+</button>
+
+{{ userName }}
+
+<app-user-table [dataSource]="usuarios" (editUser)="onEditUser($event)" (deleteUser)="onDeleteUser($event)" ></app-user-table>
