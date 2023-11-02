@@ -4,7 +4,7 @@ import { UserComponent } from './user.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { UserDialogComponent } from './components/user-dialog/user-dialog.component';
 import { UserTableComponent } from './components/user-table/user-table.component';
-
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -15,7 +15,8 @@ import { UserTableComponent } from './components/user-table/user-table.component
   ],
   imports: [
     CommonModule,
-    SharedModule 
+    SharedModule,
+    RouterModule
   ],
   exports:[UserComponent]
 })

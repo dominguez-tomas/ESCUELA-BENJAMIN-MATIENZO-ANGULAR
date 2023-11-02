@@ -1,0 +1,12 @@
+<h1>CURSOS</h1>
+
+<div class="d-flex justify-content-start mb-3">
+    <button (click)="addCourse()" mat-flat-button color="primary">Agregar cursos</button>
+</div>
+
+<app-courses-table 
+[dataSource]="(cursos$ | async) || []" 
+(deleteCourse)="onDeletecourse($event)" 
+(editCourse)="onEditCourse($event)">
+
+</app-courses-table>

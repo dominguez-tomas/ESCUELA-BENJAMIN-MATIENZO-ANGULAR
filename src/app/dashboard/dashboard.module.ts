@@ -12,6 +12,9 @@ import { SidebarComponent } from './component/sidebar/sidebar.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { MatListModule } from '@angular/material/list';
 import { SharedModule } from '../shared/shared.module';
+import { RouterModule } from '@angular/router';
+import { HomeComponent } from './pages/home/home/home.component';
+import { CoursesModule } from './pages/courses/courses.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,7 @@ import { SharedModule } from '../shared/shared.module';
     ToolbarComponent,
     SidebarComponent,
     FooterComponent,
+    HomeComponent,
   ],
   imports: [
     CommonModule,
@@ -28,8 +32,10 @@ import { SharedModule } from '../shared/shared.module';
     MatIconModule,
     MatButtonModule,
     UserModule,
+    CoursesModule,
     MatListModule,
-    SharedModule
+    SharedModule,
+    RouterModule
   ],
   exports: [DashboardComponent],
 })
