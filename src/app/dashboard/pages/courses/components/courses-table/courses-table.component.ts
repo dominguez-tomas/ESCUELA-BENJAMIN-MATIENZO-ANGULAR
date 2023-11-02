@@ -13,6 +13,7 @@ export class CoursesTableComponent {
 
   @Output()
   editCourse = new EventEmitter();
+  @Output()
   deleteCourse = new EventEmitter();
 
   displayedColumns = ['id', 'nombre', 'fechaDeInicio', 'fechaDeFin', 'actions']
