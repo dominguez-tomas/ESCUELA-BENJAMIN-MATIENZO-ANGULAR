@@ -15,7 +15,13 @@
         <div class="col-6">
             <mat-form-field class="W-100">
                 <mat-label>Fecha de inicio.</mat-label>
-                <input matInput>
+
+                <input [formControl]="fechaDeInicioControl" matInput [matDatepicker]="fechaDeInicioPicker">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="fechaDeInicioPicker"></mat-datepicker-toggle>
+                <mat-datepicker #fechaDeInicioPicker></mat-datepicker>
+                <!-- <input [formControl]="fechaDeInicioControl" matInput> -->
+
                 <mat-error>
                     Este campo es requerido.
                 </mat-error>
@@ -25,7 +31,13 @@
         <div class="col-6">
             <mat-form-field class="W-100">
                 <mat-label>Fecha de finalizacion.</mat-label>
-                <input matInput>
+
+                <input [formControl]="fechaDeFinControl" matInput [matDatepicker]="fechaDeFinPicker">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="fechaDeFinPicker"></mat-datepicker-toggle>
+                <mat-datepicker #fechaDeFinPicker></mat-datepicker>    
+                <!-- <input [formControl]="fechaDeFinControl" matInput> -->
+
                 <mat-error>
                     Este campo es requerido.
                 </mat-error>

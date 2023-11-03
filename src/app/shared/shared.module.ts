@@ -8,6 +8,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
 import { HeadlineDirective } from './directives/headline.directive';
 import { MatTableModule } from '@angular/material/table';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MatTableModule } from '@angular/material/table';
     MatFormFieldModule,
     MatDialogModule,
     HeadlineDirective,
-    MatTableModule
+    MatTableModule,
+    MatDatepickerModule
   ]
 })
 export class SharedModule { }

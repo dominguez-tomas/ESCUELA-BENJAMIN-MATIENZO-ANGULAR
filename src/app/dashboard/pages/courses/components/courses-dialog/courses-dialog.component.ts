@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { CoursesService } from '../../courses.service';
 
@@ -11,14 +11,15 @@ import { CoursesService } from '../../courses.service';
 export class CoursesDialogComponent {
 
   nombreControl = new FormControl();
-  fechaDeInicioControl = new FormControl();
-  fechaDeFinControl = new FormControl();
+  fechaDeInicioControl = new FormControl<string|Date>('', Validators.required);
+  fechaDeFinControl = new FormControl<string|Date>('', Validators.required);
 
   coursesForm = new FormGroup({
     nombre: this.nombreControl,
     fechaDeInicio: this.fechaDeInicioControl,
     fechaDeFin: this.fechaDeFinControl,
   });
+curso: any;
 
   constructor(
     private matDialogRef: MatDialogRef<CoursesDialogComponent>, 
@@ -35,6 +36,10 @@ export class CoursesDialogComponent {
       });
     }
   }
+
+  public get isEditing(): boolean{
+    return !!this.cursoId;}
+  
 
   onSubmit(): void {
     if (this.coursesForm.invalid){

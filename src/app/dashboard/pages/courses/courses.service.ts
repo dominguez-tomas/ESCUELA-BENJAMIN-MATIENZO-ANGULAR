@@ -32,8 +32,7 @@ export class CoursesService {
     }
 
     editCourse(id: number, payload: curso): Observable<curso[]> {
-        this.cursos.push(payload);
-        return of(this.cursos.map((c)=> c.id === id ? {...c, ...payload} : c));
+        return of(this.cursos.map((c) => (c.id === id ? {...c, ...payload} : c)));
     }
 
     deleteCourse$(id: number): Observable<curso[]> {
