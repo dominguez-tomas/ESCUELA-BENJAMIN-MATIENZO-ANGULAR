@@ -7,6 +7,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { SharedModule } from './shared/shared.module';
 import { MatNativeDateModule } from '@angular/material/core';
+import { CoreModule } from './core/core.module';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +21,9 @@ import { MatNativeDateModule } from '@angular/material/core';
     BrowserAnimationsModule,
     DashboardModule,
     SharedModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    CoreModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

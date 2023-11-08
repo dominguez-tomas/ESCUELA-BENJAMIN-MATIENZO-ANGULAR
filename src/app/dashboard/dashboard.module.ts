@@ -6,15 +6,13 @@ import { FormsModule } from './pages/forms/forms.module';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { UserModule } from './pages/user/user.module';
 import { ToolbarComponent } from './component/toolbar/toolbar.component';
 import { SidebarComponent } from './component/sidebar/sidebar.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { MatListModule } from '@angular/material/list';
 import { SharedModule } from '../shared/shared.module';
-import { RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home/home.component';
-import { CoursesModule } from './pages/courses/courses.module';
+import { DashboardRoutingModule } from './dashboard-routing.module';
 
 @NgModule({
   declarations: [
@@ -31,11 +29,9 @@ import { CoursesModule } from './pages/courses/courses.module';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    UserModule,
-    CoursesModule,
     MatListModule,
     SharedModule,
-    RouterModule
+    DashboardRoutingModule
   ],
   exports: [DashboardComponent],
 })

@@ -1,0 +1,13 @@
+{
+    "usuarios":[
+        {
+            "name": "Tomas",
+            "apellido": "Dominguez",
+            "email": "test66@gmail.com",
+            "contraseña": "123",
+            "token": "bmwfdwbmbgpoprfdño",
+            "role": "BACKEND",
+            "id": 1
+        }
+    ]
+}
