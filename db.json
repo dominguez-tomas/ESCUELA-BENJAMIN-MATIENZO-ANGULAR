@@ -3,11 +3,70 @@
         {
             "name": "Tomas",
             "apellido": "Dominguez",
-            "email": "test66@gmail.com",
-            "contraseña": "123",
+            "email": "tomasdom66@gmail.com",
+            "contraseña": "0173394",
             "token": "bmwfdwbmbgpoprfdño",
-            "role": "BACKEND",
+            "role": "ADMINISTRADOR",
             "id": 1
+        },
+        {
+            "name": "Alberto",
+            "apellido": "Paez",
+            "email": "paezalberto31@gmail.com",
+            "contraseña": "313266",
+            "token": "xcnbdcdlsllskqwerq",
+            "role": "STAFF",
+            "id": 2
+        },
+        {
+            "name": "rolando",
+            "apellido": "cerveni",
+            "email": "rolancerveni99@gmail.com",
+            "contraseña": "1824",
+            "token": "qclbñqdlspkmqveqt",
+            "role": "alumno",
+            "id": 3
+        },
+        {
+            "name": "esteban",
+            "apellido": "lamarquez",
+            "email": "lamarquezesteban85@gmail.com",
+            "contraseña": "9933",
+            "token": "rclvlqdññpklavtlr",
+            "role": "alumno",
+            "id": 4
         }
+    ],
+    "inscripciones": [
+        {
+            "id": 9940788431,
+            "cursoId": 1,
+            "usuarioId": 3
+        },
+        {
+            "id": 3458992102,
+            "cursoId": 2,
+            "usuarioId": 4
+        },
+        {
+            "id": 6778012353,
+            "cursoId": 3,
+            "usuarioId": 4
+        }
+    ],
+    "cursos": [
+        {
+            "id": 1,
+            "name": "robotica"
+        },
+        {
+            "id": 2,
+            "name": "mecanica"
+        },
+        {
+            "id": 3,
+            "name": "electricista"
+        }
+
     ]
 }

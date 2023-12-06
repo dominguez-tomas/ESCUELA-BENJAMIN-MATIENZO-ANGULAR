@@ -10,6 +10,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { HeadlineDirective } from './directives/headline.directive';
 import { MatTableModule } from '@angular/material/table';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     MatDialogModule,
     HeadlineDirective,
     MatTableModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatSelectModule
   ]
 })
 export class SharedModule { }

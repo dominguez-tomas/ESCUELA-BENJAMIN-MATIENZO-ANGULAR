@@ -26,7 +26,11 @@ const routes: Routes = [
       },
       {
         path: 'courses',
-        component: CoursesComponent
+        component: CoursesComponent,
+      },
+      {
+        path: 'inscripciones',
+        loadChildren: () => import('./dashboard/pages/inscripciones/inscripciones.module').then((m) => m.InscripcionesModule),
       },
       {
         path: '**',
