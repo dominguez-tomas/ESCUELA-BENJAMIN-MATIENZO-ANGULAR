@@ -13,5 +13,3 @@ export const selectInscripcionesIsLoading = createSelector(selectInscripcionesSt
 export const selectCursoOptions = createSelector(selectInscripcionesState,(state) => state.cursoOptions);
 
 export const selectAlumnoOptions = createSelector(selectInscripcionesState,(state) => state.alumnoOptions);
-
-export const selectIsLoadingDialogOptions = createSelector(selectInscripcionesState,(state) => state.isLoadingDialogOptions);

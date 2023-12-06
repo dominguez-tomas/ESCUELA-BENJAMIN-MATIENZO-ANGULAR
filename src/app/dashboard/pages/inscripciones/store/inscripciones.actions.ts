@@ -1,19 +1,19 @@
 import { createActionGroup, emptyProps, props } from '@ngrx/store';
-import { CreateinscripcionessPayload, inscripciones } from '../models';
+import { CreateInscripcionessPayload, inscripciones } from '../models';
 import { curso } from '../../courses/models';
 import { User } from '../../user/models';
 
 export const InscripcionesActions = createActionGroup({
   source: 'Inscripciones',
   events: {
-    'Load inscripcioness By Id': props<{ id: number }>(),
-    'Load inscripcioness': emptyProps(),
-    'Load inscripcioness Success': props<{ data: inscripciones[] }>(),
-    'Load inscripcioness Failure': props<{ error: unknown }>(),
-    'Load inscripcioness Dialog Options': emptyProps(),
-    'Load inscripcioness Dialog Options Success': props<{cursos: curso[];alumno: User[];}>(),
-    'Load inscripcioness Dialog Options Failure': props<{ error: unknown }>(),
-    'Create ': props<{ payload: CreateinscripcionessPayload }>(),
-    'Create  Failure': props<{ error: unknown }>(),
+    'Load Inscripcioness By Id': props<{ id: number }>(),
+    'Load Inscripcioness': emptyProps(),
+    'Load Inscripcioness Success': props<{ data: inscripciones[] }>(),
+    'Load Inscripcioness Failure': props<{ error: unknown }>(),
+    'Load Inscripcioness Dialog Options': emptyProps(),
+    'Load Inscripcioness Dialog Options Success': props<{cursos: curso[];alumno: User[];}>(),
+    'Load Inscripcioness Dialog Options Failure': props<{ error: unknown }>(),
+    'Create Inscripcioness': props<{ payload: CreateInscripcionessPayload }>(),
+    'Create Inscripcioness Failure': props<{ error: unknown }>(),
   },
 });

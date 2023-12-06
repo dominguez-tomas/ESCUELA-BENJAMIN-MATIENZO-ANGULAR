@@ -3,25 +3,18 @@
         <div class="col-6">
             <mat-form-field class="W-100">
                 <mat-label>Curso</mat-label>
-                <mat-select>
-                    <mat-option *ngFor="let curso of cursoOptions$ | async">{{ curso.nombre}}></mat-option>
+                <mat-select [formControl]="cursoIdControl">
+                    <mat-option [value]="curso.id" *ngFor="let curso of cursoOptions$ | async">{{ curso.nombre }}</mat-option>
                 </mat-select>
-                <mat-error>
-                    Este campo es requerido.
-                </mat-error>
             </mat-form-field>
         </div>
 
         <div class="col-6">
             <mat-form-field class="W-100">
                 <mat-label>Nombre Completo</mat-label>
-                <mat-select>
-                    <mat-option *ngFor="let alumno of alumnoOptions$ | async">{{ alumno.name}} {{ alumno.apellido
-                        }}></mat-option>
+                <mat-select [formControl]="usuarioIdControl">
+                    <mat-option [value]="alumno.id" *ngFor="let alumno of alumnoOptions$ | async">{{ alumno.name }} {{ alumno.apellido }}</mat-option>
                 </mat-select>
-                <mat-error>
-                    Este campo es requerido.
-                </mat-error>
             </mat-form-field>
         </div>
 

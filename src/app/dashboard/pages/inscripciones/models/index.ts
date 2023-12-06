@@ -8,7 +8,7 @@ export interface inscripciones {
     user?: User;
     curso?: curso;
 }
-export interface CreateinscripcionessPayload {
+export interface CreateInscripcionessPayload {
     cursoId: number | null;
     usuarioId: number | null;
   }

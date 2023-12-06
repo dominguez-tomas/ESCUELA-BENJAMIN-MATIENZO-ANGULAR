@@ -7,7 +7,7 @@ import { Observable, take } from 'rxjs';
 import { selectAlumnoOptions, selectCursoOptions } from '../../store/inscripciones.selectors';
 import { MatDialogRef } from '@angular/material/dialog';
 import { Actions, ofType } from '@ngrx/effects';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-inscripciones-dialog',
@@ -15,38 +15,28 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./inscripciones-dialog.component.scss']
 })
 export class InscripcionesDialogComponent {
-  export class inscripcionesDialogComponent {
-    userIdControl = new FormControl<number | null>(null);
-    courseIdControl = new FormControl<number | null>(null);
+    usuarioIdControl = new FormControl<number | null>(null);
+    cursoIdControl = new FormControl<number | null>(null);
   
-    enrollmentForm = new FormGroup({
-      courseId: this.courseIdControl,
-      userId: this.userIdControl,
+    inscripcionesForm = new FormGroup({
+      cursoId: this.cursoIdControl,
+      usuarioId: this.usuarioIdControl,
     });
   
+    cursoOptions$: Observable<curso[]>;
+    alumnoOptions$: Observable<User[]>;
 
-  cursoOptions$: Observable<curso[]>;
-  alumnoOptions$: Observable<User[]>;
-    action$: any;
-    matDialogRef: any;
-    inscripcionessForm: any;
-
-  constructor(private store: Store) {
-    this.store.dispatch(InscripcionesActions.loadInscripcionessDialogOptions());
-    this.cursoOptions$ = this.store.select(selectCursoOptions)
-    this.alumnoOptions$ = this.store.select(selectAlumnoOptions);
-  
-    constructor(private store: Store,private Actions: Actions,private MatDialogRef: MatDialogRef<InscripcionesDialogComponent>) 
+  constructor(private store: Store,private action$: Actions,private MatDialogRef: MatDialogRef<InscripcionesDialogComponent>) 
   {
     this.store.dispatch(InscripcionesActions.loadInscripcionessDialogOptions());
     this.cursoOptions$ = this.store.select(selectCursoOptions);
     this.alumnoOptions$ = this.store.select(selectAlumnoOptions);
-    this.action$.pipe(ofType(InscripcionesActions.loadInscripcioness), take(1)).subscribe({next: () => this.matDialogRef.close(),
+    this.action$.pipe(ofType(InscripcionesActions.loadInscripcioness), take(1)).subscribe({next: () => this.MatDialogRef.close(),
       });
+    }
 
     onSubmit(): void {this.store.dispatch(
-      InscripcionesActions.loadInscripcioness({payload: this.inscripcionessForm.getRawValue(),})
+      InscripcionesActions.createInscripcioness({payload: this.inscripcionesForm.getRawValue(),})
     );
   }
 }
-}}}

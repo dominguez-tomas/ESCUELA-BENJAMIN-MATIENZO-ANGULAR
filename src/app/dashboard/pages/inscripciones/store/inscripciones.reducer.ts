@@ -30,19 +30,11 @@ export const reducer = createReducer(
   on(InscripcionesActions.loadInscripcionessSuccess, (state, {data}) => ({...state, isLoading: false, inscripciones: data})),
   on(InscripcionesActions.loadInscripcionessFailure, (state, {error}) => ({...state, isLoading: false, error})),
   on(InscripcionesActions.loadInscripcionessDialogOptions, (state) => { return {...state, isLoadingDialogOptions: true,};}),
-  on(InscripcionesActions.loadInscripcionessDialogOptionsSuccess, (state, action) => ({
-    ...state,
-    cursoOptions: action.cursos,
-    alumnoOptions: action.alumno,
-    isLoadingDialogOptions: false,
-  })),
+  on(InscripcionesActions.loadInscripcionessDialogOptionsSuccess, (state, action) => ({...state, cursoOptions: action.cursos, alumnoOptions: action.alumno, isLoadingDialogOptions: false,})),
   on(InscripcionesActions.loadInscripcionessDialogOptionsFailure, (state, action) => ({...state, error: action.error, isLoadingDialogOptions: false,})),
   on(InscripcionesActions.loadInscripcionessDialogOptionsFailure, (state, action) => ({...state, error: action.error, isLoadingDialogOptions: false,}))
-
 );
   
-
-
 export const inscripcionesFeature = createFeature({
   name: inscripcionesFeatureKey,
   reducer,

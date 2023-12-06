@@ -1,27 +1,21 @@
-# ESCUELAANGULAR
+Escuela Benjamin Matienzo.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
+usuarios con sus respectivas contraseñas:
+<!-- Este usuario tiene un rol de ADMINISTRADOR, el cual le deja ingresar a todas las pestañas -->
+Tomas Dominguez.
+email: tomasdom66@gmail.com
+contraseña: "0173394"
 
-## Development server
+<!-- Este usuario tiene un rol de STAFF, el cual le deja crear cursos y tambien inscribir alumnos -->
+Alberto Paez
+email: paezalberto31@gmail.com
+contraseña: "313266"
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<!-- Estos usuarios tienen el rol de ALUMNO -->
+rolando cerveni
+email: rolancerveni99@gmail.com
+contraseña: "1824"
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+esteban lamarquez
+email: lamarquezesteban85@gmail.com
+contraseña: "9933"

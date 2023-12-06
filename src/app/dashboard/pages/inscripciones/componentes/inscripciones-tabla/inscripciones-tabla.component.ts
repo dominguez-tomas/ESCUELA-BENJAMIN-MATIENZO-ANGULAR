@@ -10,7 +10,7 @@ import { selectInscripciones } from '../../store/inscripciones.selectors';
   styleUrls: ['./inscripciones-tabla.component.scss']
 })
 export class InscripcionesTablaComponent {
-  displayedColumns = ['id', 'curso', 'alumno', 'acciones']
+  displayedColumns = ['id', 'curso', 'alumno']
 
   inscripciones$: Observable<inscripciones[]>;
 
